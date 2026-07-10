@@ -4,10 +4,10 @@
         justify-content: center;
         align-items: center;
         padding: 1rem;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-top: 20px;
-        margin-bottom: 50px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
         font-family: 'Pacifico', cursive;
         font-size: 1vw;
     }
@@ -15,8 +15,8 @@
         text-align: center;
         font-family: 'Pacifico', cursive;
         font-size: 2vw;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
 
 
@@ -24,7 +24,7 @@
 
 <div class="topmenu">
     <nav>
-        <a style="margin-right: 50px;" href="/">Home</a>
+        <a style="margin-right: 1vw;" href="/">Home</a>
         <a href="/Portfolio">Portfolio</a>
     </nav>
     <div class="logo">
@@ -32,6 +32,6 @@
     </div>
     <nav>
         <a href="/About">About</a>
-        <a style="margin-left: 50px;" href="/Contact">Contact</a>
+        <a style="margin-left: 1vw;" href="/Contact">Contact</a>
     </nav>
 </div>
