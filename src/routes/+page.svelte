@@ -1,9 +1,12 @@
 <script>
     import TopMenu from '$lib/components/TopMenu.svelte';
-    import backgroundImage1 from '$lib/assets/images/AntBackground.webp';
+    import RightArrow from '$lib/components/RightArrow.svelte';
+    import LeftArrow from '$lib/components/LeftArrow.svelte';
+    import ArrowsDown from '$lib/components/ArrowsDown.svelte';
+    import backgroundImage4 from '$lib/assets/images/AntBackground.webp';
     import backgroundImage2 from '$lib/assets/images/coot1.webp';
     import backgroundImage3 from '$lib/assets/images/BlueTitSpring.webp';
-    import backgroundImage4 from '$lib/assets/images/Swans.webp';
+    import backgroundImage1 from '$lib/assets/images/Swans.webp';
     import backgroundImage5 from '$lib/assets/images/TawnyOwlClose.webp';
     import backgroundImage6 from '$lib/assets/images/Efferia.webp';
 
@@ -16,8 +19,19 @@
         backgroundImage6
     ];  
 
+    let slideInterval = setInterval(slideRight, 5000);
+
+    function slide(direction) {
+        if(direction === "left")
+            slideLeft();
+        else if(direction === "right")
+            slideRight();
+
+        clearInterval(slideInterval);
+        slideInterval = setInterval(slideRight, 5000);
+    }
+
     function slideRight() {
-        console.log('Sliding right');
         if (currentImageIndex < sliderImages.length - 1) {
             currentImageIndex++;
         } else {
@@ -26,13 +40,13 @@
     }
 
     function slideLeft() {
-        console.log('Sliding left');
         if (currentImageIndex > 0) {
             currentImageIndex--;
         } else {
             currentImageIndex = sliderImages.length - 1; // Loop back to the last image
         }
     }
+
 </script>
 
 <head>
@@ -41,16 +55,24 @@
 </head>
 
 <div style= "height: 100vh; width: 100vw; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;">
-    <img src="{sliderImages[currentImageIndex]}" alt="Ant Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-    <button onclick={slideLeft} style="position: absolute; top: 10px; left: 10px; z-index: 1;">
-        Previous
+    {#each sliderImages as image, index}
+        <img src="{image}" alt="Ant Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: {index === currentImageIndex ? 1 : 0}; transition: opacity 1s ease-in-out;">
+    {/each}
+
+    <button onclick={() => slide("left")} class="absolute top-0 left-0 h-full w-50 flex items-center justify-center group">
+        <div class="absolute h-full w-1 left-0 bg-linear-to-l from-transparent to-gray-200 group-hover:w-full transition-all opacity-25"></div>
+        <LeftArrow class="absolute mt-[50vh] mr-10 top-2.5 left-2.5 z-1 h-12.5 w-12.5 fill-gray-300 group-hover:fill-gray-400 drop-shadow-md drop-shadow-black"/>
     </button>
-    <button onclick={slideRight} style="position: absolute; top: 10px; right: 10px; z-index: 1;">
-        Next
+
+    <button onclick={() => slide("right")} class="absolute top-0 right-0 h-full w-50 flex items-center justify-center group">
+        <div class="absolute h-full w-1 right-0 bg-linear-to-r from-transparent to-gray-200 group-hover:w-full transition-all opacity-25"></div>
+        <RightArrow class="absolute mt-[50vh] ml-10 top-2.5 right-2.5 z-1 h-12.5 w-12.5 fill-gray-300 group-hover:fill-gray-400 drop-shadow-md drop-shadow-black"/>
     </button>
+
     <TopMenu/>
 
-    <h1 class="centered">Welcome to my Home Page</h1>
+    <ArrowsDown class="absolute bottom-0 h-20 w-20 fill-gray-300 drop-shadow-md drop-shadow-black animate-bounce"/>
+
     
 </div>
 

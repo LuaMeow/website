@@ -1,4 +1,4 @@
-<div class="flex justify-center items-center p-1 m-2 mt-10 mb-[10vh] font-[Birthstone+Bounce] text-3xl text-gray-300 text-shadow-black text-shadow-md">
+<div class="flex justify-center items-center p-1 m-2 mt-10 mb-[10vh] text-3xl text-gray-300 text-shadow-black text-shadow-md">
     <nav>
         <a style="margin-right: 2vw; font-[M+PLUS+U]" href="/">Home</a>
         <a style="font-[M+PLUS+U]" href="/Portfolio">Portfolio</a>
