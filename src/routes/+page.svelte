@@ -54,7 +54,7 @@
     
 </head>
 
-<div style= "height: 100vh; width: 100vw; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;">
+<div style= "height: 100vh; min-width: 100%; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;">
     {#each sliderImages as image, index}
         <img src="{image}" alt="Ant Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: {index === currentImageIndex ? 1 : 0}; transition: opacity 1s ease-in-out;">
     {/each}
