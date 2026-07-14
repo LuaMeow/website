@@ -19,7 +19,7 @@
         backgroundImage6
     ];  
 
-    let slideInterval = setInterval(slideRight, 5000);
+    let slideInterval = setInterval(slideRight, 6000);
 
     function slide(direction) {
         if(direction === "left")
@@ -28,7 +28,7 @@
             slideRight();
 
         clearInterval(slideInterval);
-        slideInterval = setInterval(slideRight, 5000);
+        slideInterval = setInterval(slideRight, 6000);
     }
 
     function slideRight() {
@@ -71,8 +71,29 @@
 
     <TopMenu/>
 
-    <ArrowsDown class="absolute bottom-0 h-20 w-20 fill-gray-300 drop-shadow-md drop-shadow-black animate-bounce"/>
-
+    <div class="absolute bottom-10 inline-flex items-center">
+        {#each sliderImages as image, index}
+            <label class="relative flex items-center cursor-pointer" for="slate-800">
+                <input
+                    name="color"
+                    type="radio"
+                    class="peer h-5 w-5 m-3 cursor-pointer appearance-none bg-gray-300 rounded-full border border-slate-300 checked:border-slate-400 transition-all shadow-md shadow-black checked:h-6.5 checked:w-6.5"
+                    id="slate-800"
+                    checked="{currentImageIndex === index ? "checked" : ""}"
+                />
+                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+            </label>
+            
+        {/each}
+    </div>
+    <div class="absolute bottom-0 right-10 animate-bounce">
+        <div class="bottom-25 right-8 font-[M+PLUS+U] text-2xl text-gray-300 drop-shadow-black drop-shadow-md text-center">
+            Scroll <br> 
+            for <br>
+            More!
+        </div>
+        <ArrowsDown class="bottom-0 right-5 h-20 w-20 fill-gray-300 drop-shadow-md drop-shadow-black"/>
+    </div>
     
 </div>
 
