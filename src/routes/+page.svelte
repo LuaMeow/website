@@ -21,12 +21,7 @@
 
     let slideInterval = setInterval(slideRight, 6000);
 
-    function slide(direction) {
-        if(direction === "left")
-            slideLeft();
-        else if(direction === "right")
-            slideRight();
-
+    function clearSlideInterval() {
         clearInterval(slideInterval);
         slideInterval = setInterval(slideRight, 6000);
     }
@@ -59,12 +54,12 @@
         <img src="{image}" alt="Ant Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: {index === currentImageIndex ? 1 : 0}; transition: opacity 1s ease-in-out;">
     {/each}
 
-    <button onclick={() => slide("left")} class="absolute top-0 left-0 h-full w-50 flex items-center justify-center group">
+    <button onclick={() => {clearSlideInterval(); slideLeft()}} class="absolute top-0 left-0 h-full w-50 flex items-center justify-center group">
         <div class="absolute h-full w-1 left-0 bg-linear-to-l from-transparent to-gray-200 group-hover:w-full transition-all opacity-25"></div>
         <LeftArrow class="absolute mt-[50vh] mr-10 top-2.5 left-2.5 z-1 h-12.5 w-12.5 fill-gray-300 group-hover:fill-gray-400 drop-shadow-md drop-shadow-black"/>
     </button>
 
-    <button onclick={() => slide("right")} class="absolute top-0 right-0 h-full w-50 flex items-center justify-center group">
+    <button onclick={() => {clearSlideInterval(); slideRight()}} class="absolute top-0 right-0 h-full w-50 flex items-center justify-center group">
         <div class="absolute h-full w-1 right-0 bg-linear-to-r from-transparent to-gray-200 group-hover:w-full transition-all opacity-25"></div>
         <RightArrow class="absolute mt-[50vh] ml-10 top-2.5 right-2.5 z-1 h-12.5 w-12.5 fill-gray-300 group-hover:fill-gray-400 drop-shadow-md drop-shadow-black"/>
     </button>
@@ -73,19 +68,20 @@
 
     <div class="absolute bottom-10 inline-flex items-center">
         {#each sliderImages as image, index}
-            <label class="relative flex items-center cursor-pointer" for="slate-800">
+            <label class="relative flex items-center cursor-pointer" for="imageRadio{index}">
                 <input
-                    name="color"
+                    name="sliderSelector"
                     type="radio"
-                    class="peer h-5 w-5 m-3 cursor-pointer appearance-none bg-gray-300 rounded-full border border-slate-300 checked:border-slate-400 transition-all shadow-md shadow-black checked:h-6.5 checked:w-6.5"
-                    id="slate-800"
+                    class="peer h-5 w-5 m-3 cursor-pointer appearance-none bg-gray-300 rounded-full border border-slate-300 checked:border-slate-400 transition-all shadow-md shadow-black checked:h-7 checked:w-7 focus:outline-none focus:bg-opacity-0 focus:ring-offset-0 focus:ring-0"
+                    id="imageRadio{index}"
+                    onclick={() => {clearSlideInterval(); currentImageIndex = index }}
                     checked="{currentImageIndex === index ? "checked" : ""}"
                 />
-                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                <span class="absolute bg-slate-800 w-4.5 h-4.5 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
             </label>
-            
         {/each}
     </div>
+
     <div class="absolute bottom-0 right-10 animate-bounce">
         <div class="bottom-25 right-8 font-[M+PLUS+U] text-2xl text-gray-300 drop-shadow-black drop-shadow-md text-center">
             Scroll <br> 
