@@ -1,5 +1,6 @@
 <script>
     import TopMenu from '$lib/components/TopMenu.svelte';
+    import BottomMenu from '$lib/components/BottomMenu.svelte';
     import RightArrow from '$lib/components/RightArrow.svelte';
     import LeftArrow from '$lib/components/LeftArrow.svelte';
     import ArrowsDown from '$lib/components/ArrowsDown.svelte';
@@ -41,7 +42,6 @@
             currentImageIndex = sliderImages.length - 1; // Loop back to the last image
         }
     }
-
 </script>
 
 <head>
@@ -64,7 +64,7 @@
         <RightArrow class="absolute mt-[50vh] ml-10 top-2.5 right-2.5 z-1 h-12.5 w-12.5 fill-gray-300 group-hover:fill-gray-400 drop-shadow-md drop-shadow-black"/>
     </button>
 
-    <TopMenu currentPage={"home"} />
+    <TopMenu currentPage={"home"}/>
 
     <div class="absolute bottom-10 inline-flex items-center">
         {#each sliderImages as image, index}
@@ -99,5 +99,4 @@
 <div style="background-image: url('{backgroundImage2}'); background-size: cover; background-position: center; min-height: 60vh; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;"></div>
 <div class="bg-white" style="min-height: 50vh;">
 </div>
-<div style=" background-color: rgb(30,30,30); min-height: 40vh;">
-</div>
+<BottomMenu currentPage={"home"}/>
