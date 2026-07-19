@@ -6,6 +6,6 @@
     About
 </title>
 
-<TopMenu/>
+<TopMenu currentPage={"about"}/>
 
 <h1 class="centered">This is my About Page</h1>

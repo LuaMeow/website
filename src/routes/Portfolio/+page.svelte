@@ -6,6 +6,6 @@
     Portfolio
 </title>
 
-<TopMenu/>
+<TopMenu currentPage={"portfolio"}/>
 
 <h1 class="centered">This is my Portfolio Page</h1>

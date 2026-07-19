@@ -64,7 +64,7 @@
         <RightArrow class="absolute mt-[50vh] ml-10 top-2.5 right-2.5 z-1 h-12.5 w-12.5 fill-gray-300 group-hover:fill-gray-400 drop-shadow-md drop-shadow-black"/>
     </button>
 
-    <TopMenu/>
+    <TopMenu currentPage={"home"} />
 
     <div class="absolute bottom-10 inline-flex items-center">
         {#each sliderImages as image, index}

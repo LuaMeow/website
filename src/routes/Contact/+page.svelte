@@ -6,6 +6,6 @@
     Contact
 </title>
 
-<TopMenu/>
+<TopMenu currentPage={"contact"}/>
 
 <h1 class="centered">This is my Contact Page</h1>
