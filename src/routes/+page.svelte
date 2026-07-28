@@ -72,12 +72,12 @@
                 <input
                     name="sliderSelector"
                     type="radio"
-                    class="peer h-5 w-5 m-3 cursor-pointer appearance-none bg-gray-300 rounded-full border border-slate-300 checked:border-slate-400 transition-all shadow-md shadow-black checked:h-7 checked:w-7 focus:outline-none focus:bg-opacity-0 focus:ring-offset-0 focus:ring-0"
+                    class="peer h-4 w-4 m-3 cursor-pointer appearance-none bg-gray-300 rounded-full border border-slate-300 checked:border-slate-400 transition-all shadow-md shadow-black checked:h-5.5 checked:w-5.5 focus:outline-none focus:bg-opacity-0 focus:ring-offset-0 focus:ring-0"
                     id="imageRadio{index}"
                     onclick={() => {clearSlideInterval(); currentImageIndex = index }}
                     checked="{currentImageIndex === index ? "checked" : ""}"
                 />
-                <span class="absolute bg-slate-800 w-4.5 h-4.5 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                <span class="absolute bg-slate-800 w-4 h-4 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
             </label>
         {/each}
     </div>
