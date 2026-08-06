@@ -20,7 +20,9 @@
         <TopMenu currentPage={"contact"} />
     
         <div class="relative flex rounded-md bg-gray-700 opacity-90 w-[80%] h-180 justify-center m-auto">
-            <h1 class="text-4xl underline drop-shadow-md drop-shadow-black text-gray-300 mt-10">Contact</h1>
+            <h1 class="text-4xl underline drop-shadow-md drop-shadow-black text-gray-300 mt-10">
+                Contact
+            </h1>
             <div class="absolute text-2xl text-gray-300 drop-shadow-md drop-shadow-black left-90 top-30">
                 <span class="underline">
                     Find me on:
@@ -31,6 +33,20 @@
                         Instagram
                     </div>
                 </a>
+            </div>
+            <div class="absolute text-2xl text-gray-300 drop-shadow-md drop-shadow-black right-90 top-30">
+                <span class="underline">
+                    Or send me a Mail:
+                </span>
+                <form 
+                    class="absolute flex flex-col gap-4 mt-10 text-black w-100"
+                    action="mailto:photography-web@olivialua.de" method="POST" enctype="text/plain"
+                >
+                    <input type="text" name="Name" placeholder="Your name" />
+                    <input type="email" name="Email" placeholder="Your email" />
+                    <textarea class="h-75" name="Message" placeholder="Your message"></textarea>
+                    <button class="drop-shadow-md drop-shadow-black hover:text-green-700 text-gray-300 hover:text-3xl transition-all" type="submit">Send!</button>
+                </form>
             </div>
         </div>
     </div>
