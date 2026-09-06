@@ -18,7 +18,7 @@
         backgroundImage4,
         backgroundImage5,
         backgroundImage6
-    ];  
+    ];
 
     let slideInterval = setInterval(slideRight, 6000);
 
@@ -46,7 +46,7 @@
 
 <head>
     <title>Olivia Lua Photography</title>
-    
+
 </head>
 
 <div style= "height: 100vh; min-width: 100%; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;">
@@ -84,19 +84,19 @@
 
     <div class="absolute bottom-0 right-10 animate-bounce">
         <div class="bottom-25 right-8 font-[M+PLUS+U] text-2xl text-gray-300 drop-shadow-black drop-shadow-md text-center">
-            Scroll <br> 
+            Scroll <br>
             for <br>
             More!
         </div>
         <ArrowsDown class="bottom-0 right-5 h-20 w-20 fill-gray-300 drop-shadow-md drop-shadow-black"/>
     </div>
-    
+
 </div>
 
 
 <div class="bg-white" style="min-height: 50vh;">
 </div>
-<div style="background-image: url('{backgroundImage2}'); background-size: cover; background-position: center; min-height: 60vh; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;"></div>
+<div style="background-image: url('{backgroundImage2}'); background-size: cover; background-position: center; min-height: 60vh; position: relative; display: flex; justify-content: top; align-items: center;"></div>
 <div class="bg-white" style="min-height: 50vh;">
 </div>
 <BottomMenu currentPage={"home"}/>
