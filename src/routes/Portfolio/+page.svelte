@@ -11,36 +11,40 @@
 </title>
 <div class = "relative min-h-[60vh] justify-center items-top">
     <div
-        class ="absolute min-w-screen min-h-[70vh] bg-cover bg-center mb-0"
+        class ="absolute min-w-screen min-h-[60vh] bg-cover bg-center mb-0"
         style ="background-image: url('{backgroundImage2}');">
+
         <TopMenu currentPage={"portfolio"}/>
-        <div class ="text-5xl underline text-center text-gray-300 font-custom drop-shadow-black drop-shadow-md pt-16">
+
+        <div class ="text-5xl underline text-center text-gray-300 font-custom drop-shadow-black drop-shadow-md pt-40">
             My Portfolio
         </div>
     </div>
 </div>
-<div class = "relative flex-row bg-white min-h-150 mt-0">
-    <div
-        class = "absolute min-w-100 min-h-100 bg-cover bg-center mt-25 ml-100 left-10 rounded-xl"
-        style = "background-image: url('{natureButton}');">
-        <button
-            type = "button"
-            class= "absolute inset-0 right-30 text-white text-2xl text-center drop-shadow-black drop-shadow-md font-[P+PLUS+M]">
-            Nature <br>
+<div class="flex bg-white min-h-150 items-center justify-center">
+    <a  href="/Nature" class="relative group w-100 h-100 mr-50">
+        <div
+            class="absolute min-w-100 min-h-100 bg-cover bg-center rounded-xl group-hover:brightness-50 transition"
+            style="background-image: url('{natureButton}');">
+        </div>
+        <div
+            class="absolute top-30 left-25 text-white text-2xl text-center drop-shadow-black drop-shadow-md font-[P+PLUS+M] cursor-pointer">
+           <span class="group-hover:underline">Nature<br>
             & <br>
-            Wildlife <br>
+           Wildlife</span> <br>
             ⟶
-        </button>
-    </div>
-    <div
-        class = "absolute min-w-100 min-h-100 bg-cover bg-center mt-25 mr-100 right-10 rounded-xl"
-        style = "background-image: url('{otherButton}');">
-        <button
-            type = "button"
-            class = "absolute inset-0 left-30 text-white text-2xl text-center drop-shadow-black drop-shadow-md font-[P+PLUS+M]">
-            Other <br>
+        </div>
+    </a>
+    <a href = "/Other" class = "relative group w-100 h-100">
+        <div
+            class = "absolute min-w-100 min-h-100 bg-cover bg-center rounded-xl group-hover:brightness-50"
+            style = "background-image: url('{otherButton}');">
+        </div>
+        <div
+            class = "absolute top-35 left-60  text-white text-2xl text-center drop-shadow-black drop-shadow-md font-[P+PLUS+M] cursor-pointer">
+            <span class="group-hover:underline">Other</span> <br>
             ⟶
-        </button>
-    </div>
+        </div>
+    </a>
 </div>
 <BottomMenu currentPage={"portfolio"}/>
