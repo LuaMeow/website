@@ -20,11 +20,13 @@
         backgroundImage6
     ];
 
-    let slideInterval = setInterval(slideRight, 6000);
+    /** One second in ms */
+    const SECOND = 1000;
 
+    let slideInterval = setInterval(slideRight, 8 * SECOND);
     function clearSlideInterval() {
         clearInterval(slideInterval);
-        slideInterval = setInterval(slideRight, 6000);
+        slideInterval = setInterval(slideRight, 8 * SECOND);
     }
 
     function slideRight() {
