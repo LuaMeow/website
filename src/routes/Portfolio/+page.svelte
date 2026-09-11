@@ -14,7 +14,7 @@
         class ="absolute min-w-screen min-h-[60vh] bg-cover bg-center mb-0"
         style ="background-image: url('{backgroundImage2}');">
 
-        <TopMenu currentPage={"portfolio"}/>
+        <TopMenu currentPage={"Portfolio"}/>
 
         <div class ="text-5xl underline text-center text-gray-300 font-custom drop-shadow-black drop-shadow-md pt-40">
             My Portfolio
@@ -22,7 +22,7 @@
     </div>
 </div>
 <div class="flex bg-white min-h-150 items-center justify-center">
-    <a  href="/Nature" class="relative group w-100 h-100 mr-50">
+    <a  href="/Portfolio/Nature" class="relative group w-100 h-100 mr-50">
         <div
             class="absolute min-w-100 min-h-100 bg-cover bg-center rounded-xl group-hover:brightness-50 transition"
             style="background-image: url('{natureButton}');">
@@ -35,7 +35,7 @@
             ⟶
         </div>
     </a>
-    <a href = "/Other" class = "relative group w-100 h-100">
+    <a href = "/Portfolio/Other" class = "relative group w-100 h-100">
         <div
             class = "absolute min-w-100 min-h-100 bg-cover bg-center rounded-xl group-hover:brightness-50"
             style = "background-image: url('{otherButton}');">

@@ -4,11 +4,11 @@
 
 </script>
 <title>
-    Nature
+    Other
 </title>
 
-<TopMenu currentPage={"portfolio"}/>
+<TopMenu currentPage={"Portfolio/Other"}/>
 
-<h1 class="centered mb-10">Nature & Wildlife</h1>
+<h1 class="centered mb-10">Other pictures</h1>
 
 <BottomMenu currentPage={"portfolio"}/>
