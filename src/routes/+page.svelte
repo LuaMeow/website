@@ -96,9 +96,9 @@
 </div>
 
 
-<div class="bg-white" style="min-height: 50vh;">
+<div class="bg-white" style="min-height: 10vh;">
 </div>
 <div style="background-image: url('{backgroundImage2}'); background-size: cover; background-position: center; min-height: 60vh; position: relative; display: flex; justify-content: top; align-items: center;"></div>
-<div class="bg-white" style="min-height: 50vh;">
+<div class="bg-white" style="min-height: 10vh;">
 </div>
 <BottomMenu currentPage={"home"}/>
