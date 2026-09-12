@@ -1,5 +1,10 @@
 <script lang="ts">
-    let { title, options, href, currentPage }: { title: string, options: { name: string, href: string }[], href: string, currentPage: string } = $props();
+    let { title, options, href, currentPage }: {
+      title: string,
+      options: { name: string, href: string }[],
+      href: string,
+      currentPage: string
+    } = $props();
 
     let pages = $derived(currentPage.split("/"));
 </script>
