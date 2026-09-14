@@ -4,6 +4,7 @@
     import backgroundImage2 from "$lib/assets/images/coot1.webp";
     import natureButton from "$lib/assets/images/naturebutton.webp";
     import otherButton from "$lib/assets/images/otherbutton.webp";
+    import ImageLink from "$lib/components/ImageLink.svelte";
 </script>
 
 <title> Portfolio </title>
@@ -22,33 +23,25 @@
 </div>
 
 <div class="flex bg-white min-h-150 items-center justify-center">
-    <a href="/Portfolio/Nature" class="relative group w-100 h-100 mr-50">
-        <div
-            class="absolute min-w-100 min-h-100 bg-cover bg-center rounded-xl group-hover:brightness-50 transition"
-            style="background-image: url('{natureButton}');"
-        ></div>
-        <div class="absolute top-30 left-25 text-white text-2xl text-center drop-shadow-black drop-shadow-md font-[P+PLUS+M] cursor-pointer">
+    <ImageLink href="/Portfolio/Nature" imageSource={natureButton} css="w-100 h-100 mr-50 rounded-xl">
+        <span class="absolute top-30 left-25">
             <span class="group-hover:underline">
-                Nature<br>
+                Nature <br>
                 & <br>
                 Wildlife <br>
             </span>
             ⟶
-        </div>
-    </a>
+        </span>
+    </ImageLink>
 
-    <a href="/Portfolio/Other" class="relative group w-100 h-100">
-        <div
-            class="absolute min-w-100 min-h-100 bg-cover bg-center rounded-xl group-hover:brightness-50"
-            style="background-image: url('{otherButton}');">
-        </div>
-        <div class="absolute top-35 left-60 text-white text-2xl text-center drop-shadow-black drop-shadow-md font-[P+PLUS+M] cursor-pointer">
+    <ImageLink href="/Portfolio/Other" imageSource={otherButton} css="w-100 h-100 rounded-xl">
+        <span class="absolute top-35 left-60">
             <span class="group-hover:underline">
                 Other <br>
             </span>
             ⟶
-        </div>
-    </a>
+        </span>
+    </ImageLink>
 </div>
 
 <BottomMenu currentPage={"portfolio"} />
