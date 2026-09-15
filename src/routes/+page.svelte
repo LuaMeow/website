@@ -10,6 +10,7 @@
     import backgroundImage4 from '$lib/assets/images/Ant.webp';
     import backgroundImage5 from '$lib/assets/images/TawnyOwl.webp';
     import backgroundImage6 from '$lib/assets/images/Efferia.webp';
+    import ImageLink from '$lib/components/ImageLink.svelte';
 
     let currentImageIndex = $state(0);
     let sliderImages = [
@@ -51,7 +52,7 @@
 
 </head>
 
-<div style= "height: 100vh; min-width: 100%; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;">
+<div class="relative flex flex-col h-screen min-w-full justify-top items-center outline-3 outline-[#2d2d2d]">
     {#each sliderImages as image, index}
         <img src="{image}" alt="Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: {index === currentImageIndex ? 1 : 0}; transition: opacity 1s ease-in-out;">
     {/each}
@@ -96,9 +97,16 @@
 </div>
 
 
-<div class="bg-white" style="min-height: 10vh;">
-</div>
-<div style="background-image: url('{backgroundImage2}'); background-size: cover; background-position: center; min-height: 60vh; position: relative; display: flex; justify-content: top; align-items: center;"></div>
-<div class="bg-white" style="min-height: 10vh;">
-</div>
+<div class="bg-white min-h-[10vh]"></div>
+<ImageLink href="/Portfolio/Nature" imageSource={backgroundImage2} css="flex h-[67vh] w-full items-center bg-cover bg-center outline-solid outline-3 outline-[#2d2d2d]">
+    <span class="ml-240 text-4xl text-gray-200">
+        <span class="group-hover:underline">
+            Nature
+            &
+            Wildlife
+        </span> <br>
+        ⟶
+    </span>
+</ImageLink>
+<div class="bg-white min-h-[10vh]"></div>
 <BottomMenu currentPage={"home"}/>

@@ -2,7 +2,7 @@
     import BottomMenu from "$lib/components/BottomMenu.svelte";
     import TopMenu from "$lib/components/TopMenu.svelte";
 
-    import backgroundImage from "$lib/assets/images/CloverDrop.webp";
+    import backgroundImage from "$lib/assets/images/Clover.webp";
 
     import PixelfedLogo from "$lib/components/PixelfedLogo.svelte";
     import InstagramLogo from "$lib/components/InstagramLogo.svelte";
@@ -18,7 +18,7 @@
         style="background-image: url('{backgroundImage}');"
     >
         <TopMenu currentPage={"contact"} />
-    
+
         <div class="relative flex rounded-md bg-gray-700 opacity-90 w-[80%] h-180 justify-center m-auto">
             <h1 class="text-4xl underline drop-shadow-md drop-shadow-black text-gray-300 mt-10">
                 Contact
@@ -38,7 +38,7 @@
                 <span class="underline">
                     Or send me a Mail:
                 </span>
-                <form 
+                <form
                     class="absolute flex flex-col gap-4 mt-10 text-black w-100"
                     action="mailto:photography-web@olivialua.de" method="POST" enctype="text/plain"
                 >
@@ -51,4 +51,4 @@
         </div>
     </div>
 </div>
-<BottomMenu currentPage={"contact"} /> 
+<BottomMenu currentPage={"contact"} />
