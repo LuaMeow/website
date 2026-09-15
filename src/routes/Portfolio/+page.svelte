@@ -9,7 +9,7 @@
 
 <title> Portfolio </title>
 
-<div class="relative min-h-[60vh] justify-center items-top">
+<div class="relative min-h-[60vh] justify-center items-top outline-3 outline-black shadow-lg shadow-black">
     <div
         class="absolute min-w-screen min-h-[60vh] bg-cover bg-center mb-0"
         style="background-image: url('{backgroundImage2}');">
@@ -23,7 +23,7 @@
 </div>
 
 <div class="flex bg-white min-h-150 items-center justify-center">
-    <ImageLink href="/Portfolio/Nature" imageSource={natureButton} css="w-100 h-100 mr-50 rounded-xl">
+    <ImageLink href="/Portfolio/Nature" imageSource={natureButton} css="w-100 h-100 mr-50 rounded-xl outline-5 outline-[#2d2d2d] -outline-offset-2 shadow-lg shadow-black">
         <span class="absolute top-30 left-25">
             <span class="group-hover:underline">
                 Nature <br>
@@ -34,7 +34,7 @@
         </span>
     </ImageLink>
 
-    <ImageLink href="/Portfolio/Other" imageSource={otherButton} css="w-100 h-100 rounded-xl">
+    <ImageLink href="/Portfolio/Other" imageSource={otherButton} css="w-100 h-100 rounded-xl outline-5 outline-[#2d2d2d] -outline-offset-2 shadow-lg shadow-black">
         <span class="absolute top-35 left-60">
             <span class="group-hover:underline">
                 Other <br>

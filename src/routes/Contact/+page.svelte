@@ -19,7 +19,7 @@
     >
         <TopMenu currentPage={"contact"} />
 
-        <div class="relative flex rounded-md bg-gray-700 opacity-90 w-[80%] h-180 justify-center m-auto">
+        <div class="relative flex rounded-md bg-gray-700 opacity-90 w-[80%] h-180 justify-center m-auto shadow-lg shadow-black">
             <h1 class="text-4xl underline drop-shadow-md drop-shadow-black text-gray-300 mt-10">
                 Contact
             </h1>

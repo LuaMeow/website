@@ -52,7 +52,7 @@
 
 </head>
 
-<div class="relative flex flex-col h-screen min-w-full justify-top items-center outline-3 outline-[#2d2d2d]">
+<div class="relative flex flex-col h-screen min-w-full justify-top items-center outline-3 outline-[#2d2d2d] shadow-lg shadow-black">
     {#each sliderImages as image, index}
         <img src="{image}" alt="Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: {index === currentImageIndex ? 1 : 0}; transition: opacity 1s ease-in-out;">
     {/each}
@@ -98,7 +98,7 @@
 
 
 <div class="bg-white min-h-[10vh]"></div>
-<ImageLink href="/Portfolio/Nature" imageSource={backgroundImage2} css="flex h-[67vh] w-full items-center bg-cover bg-center outline-solid outline-3 outline-[#2d2d2d]">
+<ImageLink href="/Portfolio/Nature" imageSource={backgroundImage2} css="flex h-[67vh] w-full items-center bg-cover bg-center outline-solid outline-3 outline-[#2d2d2d] shadow-lg shadow-black">
     <span class="ml-240 text-4xl text-gray-200">
         <span class="group-hover:underline">
             Nature
