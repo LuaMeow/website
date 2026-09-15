@@ -1,9 +1,9 @@
 <script>
     import BottomMenu from "$lib/components/BottomMenu.svelte";
     import TopMenu from "$lib/components/TopMenu.svelte";
-    import backgroundImage2 from "$lib/assets/images/coot1.webp";
-    import natureButton from "$lib/assets/images/naturebutton.webp";
-    import otherButton from "$lib/assets/images/otherbutton.webp";
+    import backgroundImage2 from "$lib/assets/images/coot.webp";
+    import natureButton from "$lib/assets/images/GreatTit.webp";
+    import otherButton from "$lib/assets/images/Vespa.webp";
     import ImageLink from "$lib/components/ImageLink.svelte";
 </script>
 

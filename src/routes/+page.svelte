@@ -4,11 +4,11 @@
     import RightArrow from '$lib/components/RightArrow.svelte';
     import LeftArrow from '$lib/components/LeftArrow.svelte';
     import ArrowsDown from '$lib/components/ArrowsDown.svelte';
-    import backgroundImage4 from '$lib/assets/images/AntBackground.webp';
-    import backgroundImage2 from '$lib/assets/images/coot1.webp';
-    import backgroundImage3 from '$lib/assets/images/BlueTitSpring.webp';
     import backgroundImage1 from '$lib/assets/images/Swans.webp';
-    import backgroundImage5 from '$lib/assets/images/TawnyOwlClose.webp';
+    import backgroundImage2 from '$lib/assets/images/Blackbird.webp';
+    import backgroundImage3 from '$lib/assets/images/BlueTit.webp';
+    import backgroundImage4 from '$lib/assets/images/Ant.webp';
+    import backgroundImage5 from '$lib/assets/images/TawnyOwl.webp';
     import backgroundImage6 from '$lib/assets/images/Efferia.webp';
 
     let currentImageIndex = $state(0);
@@ -53,7 +53,7 @@
 
 <div style= "height: 100vh; min-width: 100%; position: relative; display: flex; justify-content: top; align-items: center; flex-direction: column;">
     {#each sliderImages as image, index}
-        <img src="{image}" alt="Ant Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: {index === currentImageIndex ? 1 : 0}; transition: opacity 1s ease-in-out;">
+        <img src="{image}" alt="Background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: {index === currentImageIndex ? 1 : 0}; transition: opacity 1s ease-in-out;">
     {/each}
 
     <button onclick={() => {clearSlideInterval(); slideLeft()}} class="absolute top-0 left-0 h-full w-50 flex items-center justify-center group">
